@@ -1,0 +1,45 @@
+# --- Code::Blocks Specifics ---
+# Файлы настроек отображения окон (личные настройки пользователя)
+*.layout
+# Файлы зависимостей, которые C::B генерирует сам
+*.depend
+# Временные файлы
+*.gch
+
+# --- Directories created by Code::Blocks ---
+# Сюда IDE складывает скомпилированные .exe и бинарники
+bin/
+# Сюда IDE складывает объектные файлы (.o)
+obj/
+
+# --- Compiled Object Files ---
+*.o
+*.obj
+
+# --- Compiled Dynamic Libraries ---
+*.so
+*.dylib
+*.dll
+
+# --- Compiled Static Libraries ---
+*.a
+*.lib
+
+# --- Executables ---
+# Windows
+*.exe
+*.msi
+# Linux
+a.out
+
+# --- OS Generated ---
+# Windows thumbnail cache
+Thumbs.db
+Desktop.ini
+# Linux folder config
+.DS_Store
+*~
+
+# --- Other IDEs ---
+.vscode/
+.idea/
