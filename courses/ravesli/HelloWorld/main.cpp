@@ -1,9 +1,11 @@
 #include <iostream>
 
-using namespace std;
+int doubleNumber(int a);
+int userInput();
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    std::cout << doubleNumber(userInput()) << std::endl;
     return 0;
 }
+
