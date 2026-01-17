@@ -1,7 +1,7 @@
 #include <iostream>
+#include "StatementsNInput.h"
+#include "HelloWorldFunc.h"
 
-int doubleNumber(int a);
-int userInput();
 
 int main()
 {
