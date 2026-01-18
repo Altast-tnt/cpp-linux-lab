@@ -8,4 +8,3 @@ int main()
     std::cout << doubleNumber(userInput()) << std::endl;
     return 0;
 }
-

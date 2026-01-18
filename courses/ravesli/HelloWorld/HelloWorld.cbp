@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="HelloWorldFunc.cpp" />
+		<Unit filename="HelloWorldFunc.h" />
+		<Unit filename="StatementsNInput.cpp" />
+		<Unit filename="StatementsNInput.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
