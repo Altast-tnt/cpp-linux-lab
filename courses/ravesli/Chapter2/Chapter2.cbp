@@ -32,8 +32,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BallFall.cpp" />
+		<Unit filename="BallFall.h" />
+		<Unit filename="MyConstants.h" />
 		<Unit filename="PrimeNumbers.cpp" />
 		<Unit filename="PrimeNumbers.h" />
+		<Unit filename="TestTask3.cpp" />
+		<Unit filename="TestTask3.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
