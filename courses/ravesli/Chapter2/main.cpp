@@ -1,8 +1,10 @@
 #include <iostream>
 #include "PrimeNumbers.h"
+#include "TestTask3.h"
 
 int main()
 {
-    isPrimeNumber(inputNumber());
+    printAnswer(inputDouble(), inputDouble(), inputOperator());
+    //isPrimeNumber(inputNumber());
     return 0;
 }
