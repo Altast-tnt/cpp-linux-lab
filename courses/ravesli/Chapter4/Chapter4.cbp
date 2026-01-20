@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Chapter3" />
+		<Option title="Chapter4" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Chapter3" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Chapter4" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Chapter3" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Chapter4" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -32,12 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="BitMaskNBitFlags.cpp" />
-		<Unit filename="BitMaskNBitFlags.h" />
-		<Unit filename="ConvertNumberToBinary.cpp" />
-		<Unit filename="ConvertNumberToBinary.h" />
-		<Unit filename="IsNumberEven.cpp" />
-		<Unit filename="IsNumberEven.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
