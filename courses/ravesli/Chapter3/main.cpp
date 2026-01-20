@@ -3,6 +3,7 @@
 
 int main()
 {
-    isEven(inputNumber());
+
+    //isEven(inputNumber());
     return 0;
 }
