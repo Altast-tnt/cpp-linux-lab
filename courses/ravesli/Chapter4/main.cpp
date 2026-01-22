@@ -2,15 +2,22 @@
 #include "Numbers.h"
 #include "StringTest.h"
 #include "EnumsTest.h"
-
+#include "StructTest.h"
+#include <clocale>
 
 int main()
 {
-    typedef int status_t;
-    status_t editData();
+    setlocale(LC_ALL, "Russian");
 
-    using status_t = int;
-    status_t editData();
+    multiplyFractions(inputFraction(), inputFraction());
+
+    //calculateEarningPerDay(inputValues());
+
+    //typedef int status_t;
+    //status_t editData();
+
+    //using status_t = int;
+    //status_t editData();
 
     //outputMob();
 
