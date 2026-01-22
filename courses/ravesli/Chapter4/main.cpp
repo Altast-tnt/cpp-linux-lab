@@ -6,8 +6,18 @@
 
 int main()
 {
-    outputMob();
+    typedef int status_t;
+    status_t editData();
+
+    using status_t = int;
+    status_t editData();
+
+    //outputMob();
+
+
     //calculateYearsLive(inputFullName(), inputAge());
+
+
     //int x = inputNum();
     //int y = inputNum();
     //printNums(x, y);

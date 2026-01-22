@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="EnumsTest.cpp" />
+		<Unit filename="EnumsTest.h" />
+		<Unit filename="Mobs.h" />
 		<Unit filename="Numbers.cpp" />
 		<Unit filename="Numbers.h" />
 		<Unit filename="StringTest.cpp" />
