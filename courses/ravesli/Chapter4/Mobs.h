@@ -1,13 +1,20 @@
 #ifndef MOBS_H
 #define MOBS_H
+#include <string>
 
-enum Mobs
+enum class Mobs
 {
-    MOBS_ORGE,
-    MOBS_GOBLIN,
-    MOBS_SKELETON,
-    MOBS_ORC,
-    MOBS_TROLL,
+    OGRE,
+    GOBLIN,
+    SKELETON,
+    ORC,
+    TROLL,
+};
+
+struct IntroduceMob
+{
+    std::string name {""};
+    int health {0};
 };
 
 #endif // MOBS_H

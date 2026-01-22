@@ -5,15 +5,15 @@ std::string getMobName(Mobs mob)
 {
     switch(mob)
     {
-        case MOBS_ORGE:
+        case Mobs::OGRE:
             return "Ogre";
-        case MOBS_GOBLIN:
+        case Mobs::GOBLIN:
             return "Goblin";
-        case MOBS_SKELETON:
+        case Mobs::SKELETON:
             return "Skeleton";
-        case MOBS_ORC:
+        case Mobs::ORC:
             return "Orc";
-        case MOBS_TROLL:
+        case Mobs::TROLL:
             return "Troll";
         default:
             return "Undefined mob!";
@@ -22,6 +22,6 @@ std::string getMobName(Mobs mob)
 
 void outputMob()
 {
-    Mobs ogre = MOBS_ORGE;
+    Mobs ogre = Mobs::OGRE;
     std::cout << "Your mob is - " << getMobName(ogre) << " defend!" << std::endl;
 }

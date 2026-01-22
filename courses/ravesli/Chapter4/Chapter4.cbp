@@ -32,13 +32,19 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Advertising.h" />
 		<Unit filename="EnumsTest.cpp" />
 		<Unit filename="EnumsTest.h" />
+		<Unit filename="FinalTest.cpp" />
+		<Unit filename="FinalTest.h" />
+		<Unit filename="Fraction.h" />
 		<Unit filename="Mobs.h" />
 		<Unit filename="Numbers.cpp" />
 		<Unit filename="Numbers.h" />
 		<Unit filename="StringTest.cpp" />
 		<Unit filename="StringTest.h" />
+		<Unit filename="StructTest.cpp" />
+		<Unit filename="StructTest.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

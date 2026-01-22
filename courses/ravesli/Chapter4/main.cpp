@@ -3,13 +3,17 @@
 #include "StringTest.h"
 #include "EnumsTest.h"
 #include "StructTest.h"
+#include "FinalTest.h"
 #include <clocale>
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
 
-    multiplyFractions(inputFraction(), inputFraction());
+    printMonster(Mobs::GOBLIN, inputCharacterisics());
+    printMonster(Mobs::ORC, inputCharacterisics());
+
+    //multiplyFractions(inputFraction(), inputFraction());
 
     //calculateEarningPerDay(inputValues());
 
