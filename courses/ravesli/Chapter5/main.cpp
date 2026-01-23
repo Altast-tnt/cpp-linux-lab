@@ -2,10 +2,13 @@
 #include "SwitchTest.h"
 #include "Animal.h"
 #include "WhileTest.h"
+#include "ForTest.h"
 
 int main()
 {
-    printIncludeWhile();
+    sumTo(5);
+    //printsometh();
+    //printIncludeWhile();
     //printAsci();
     //printNumberOfLegs(Animal::CAT);
     //calculate(2, 6, '=\');
