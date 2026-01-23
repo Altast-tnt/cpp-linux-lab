@@ -32,6 +32,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Animal.h" />
+		<Unit filename="BallFall.cpp" />
+		<Unit filename="BallFall.h" />
+		<Unit filename="ForTest.cpp" />
+		<Unit filename="ForTest.h" />
+		<Unit filename="GameHi-Lo.cpp" />
+		<Unit filename="GameHi-Lo.h" />
+		<Unit filename="MyConstants.h" />
+		<Unit filename="SwitchTest.cpp" />
+		<Unit filename="SwitchTest.h" />
+		<Unit filename="WhileTest.cpp" />
+		<Unit filename="WhileTest.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

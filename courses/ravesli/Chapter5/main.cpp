@@ -3,10 +3,17 @@
 #include "Animal.h"
 #include "WhileTest.h"
 #include "ForTest.h"
+#include "BallFall.h"
+#include "GameHi-Lo.h"
+#include <cstdlib>
+#include <ctime>
 
 int main()
 {
-    sumTo(5);
+    srand(static_cast<unsigned int>(time(nullptr)));
+    game();
+    //ballFallHeight(printHeight());
+    //sumTo(5);
     //printsometh();
     //printIncludeWhile();
     //printAsci();
