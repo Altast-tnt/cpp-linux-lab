@@ -26,7 +26,7 @@ int getInt()
 }
 
 
-void printMassivesElements(const int array[], int massiveLength)
+void printMassivesElements(const int *array, int massiveLength)
 {
     int userNum = getInt();
     for (int i = 0; i < massiveLength; ++i)
@@ -38,7 +38,7 @@ void printMassivesElements(const int array[], int massiveLength)
     }
 }
 
-void printStudentScore(const int array[], int massiveLength)
+void printStudentScore(const int *array, int massiveLength)
 {
     int maxIndex = 0;
     for (int student = 0; student < massiveLength; ++student)
@@ -53,7 +53,7 @@ void printStudentScore(const int array[], int massiveLength)
 }
 
 
-void sortMassive(int array[], int massiveLength)
+void sortMassive(int *array, int massiveLength)
 {
     for (int endIndex = massiveLength - 1; endIndex > 0; --endIndex)
     {
@@ -71,7 +71,7 @@ void sortMassive(int array[], int massiveLength)
         std::cout << array[i] << ' ';
 }
 
-void bubbleSortMassive(int array[], int massiveLength)
+void bubbleSortMassive(int *array, int massiveLength)
 {
     for (int iteration = 0; iteration < massiveLength - 1; ++iteration)
     {
@@ -96,3 +96,32 @@ void bubbleSortMassive(int array[], int massiveLength)
         std::cout << array[i] << ' ';
     }
 }
+
+void iterationArrayByPointer()
+{
+    const int arrayLength = 9;
+	char name[arrayLength] = "Angelina";
+	int numVowels(0);
+	for (char *ptr = name; ptr < name + arrayLength; ++ptr)
+	{
+		switch (*ptr)
+		{
+            case 'A':
+            case 'a':
+            case 'E':
+            case 'e':
+            case 'I':
+            case 'i':
+            case 'O':
+            case 'o':
+            case 'U':
+            case 'u':
+			++numVowels;
+		}
+	}
+
+	std::cout << name << " has " << numVowels << " vowels.\n";
+
+}
+
+
