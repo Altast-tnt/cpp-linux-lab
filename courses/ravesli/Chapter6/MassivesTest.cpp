@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits>
+#include <algorithm>
 
 int getInt()
 {
@@ -49,4 +50,49 @@ void printStudentScore(const int array[], int massiveLength)
     }
 
     std::cout << "The best score was " << array[maxIndex] << " on the " << maxIndex + 1 << " position in array\n";
+}
+
+
+void sortMassive(int array[], int massiveLength)
+{
+    for (int endIndex = massiveLength - 1; endIndex > 0; --endIndex)
+    {
+        int smallestIndex = endIndex;
+        for (int currentIndex = endIndex - 1; currentIndex >= 0; --currentIndex)
+        {
+            if (array[currentIndex] < array[smallestIndex])
+            {
+                 smallestIndex = currentIndex;
+            }
+        }
+        std::swap(array[endIndex], array[smallestIndex]);
+    }
+    for (int i = 0; i < massiveLength; ++i)
+        std::cout << array[i] << ' ';
+}
+
+void bubbleSortMassive(int array[], int massiveLength)
+{
+    for (int iteration = 0; iteration < massiveLength - 1; ++iteration)
+    {
+        bool swapped(false);
+        for (int startIndex = 0; startIndex < massiveLength - 1 - iteration; ++startIndex)
+        {
+            if(array[startIndex] > array[startIndex + 1])
+            {
+                std::swap(array[startIndex], array[startIndex + 1]);
+                swapped = true;
+            }
+        }
+        if (!swapped)
+        {
+            std::cout << "Early termination on iteration: " << iteration + 1 << '\n';
+            break;
+        }
+    }
+    //std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    for (int i = 0; i < massiveLength; ++i)
+    {
+        std::cout << array[i] << ' ';
+    }
 }
