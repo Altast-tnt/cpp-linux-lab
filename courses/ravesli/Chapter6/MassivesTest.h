@@ -7,4 +7,6 @@ void sortMassive(int *array, int massiveLength);
 void bubbleSortMassive(int *array, int massiveLength);
 void iterationArrayByPointer();
 
+void printNamesList();
+
 #endif // MASSIVESTEST_H

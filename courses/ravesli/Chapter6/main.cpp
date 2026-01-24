@@ -18,9 +18,9 @@
 
 int main()
 {
+    printNamesList();
 
-
-    iterationArrayByPointer();
+//    iterationArrayByPointer();
 
 //    int a = 123;
 //    int *ptr = &a;

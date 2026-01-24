@@ -6,7 +6,7 @@ int getInt()
 {
     while (true)
     {
-        std::cout << "Enter a number (1-9): ";
+        std::cout << "How much names do you want: ";
         int n;
         std::cin >> n;
         if (std::cin.fail())
@@ -14,15 +14,46 @@ int getInt()
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Error getInt(): Enter a number!\n";
-        } else if(n < 1 || n > 9)
+        }  else
         {
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Enter a number from 1 to 9!\n";
-        } else
-        {
             return n;
         }
     }
+}
+
+void printNamesList()
+{
+    int length = getInt();
+
+    std::string *names = new std::string[length];
+
+    for (int i = 0; i < length; ++i)
+    {
+        std::cout << "Enter a #" << i + 1 << " name: ";
+        std::getline(std::cin, names[i]);
+    }
+
+    for (int startIndex = 0; startIndex < length - 1; ++startIndex)
+    {
+        int firstAlpha = startIndex;
+        for (int currentIndex = startIndex + 1; currentIndex < length; ++currentIndex)
+        {
+            if(names[firstAlpha] > names[currentIndex])
+            {
+                firstAlpha = currentIndex;
+            }
+        }
+        std::swap(names[startIndex], names[firstAlpha]);
+    }
+    std::cout << "Sorted list:\n";
+    for (int i = 0; i < length; ++i)
+    {
+        std::cout << "Name #" << i + 1 << ": " << names[i] << '\n';
+    }
+
+    delete[] names;
+    names = nullptr;
 }
 
 
