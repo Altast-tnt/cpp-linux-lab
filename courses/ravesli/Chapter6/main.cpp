@@ -18,7 +18,9 @@
 
 int main()
 {
-    printNamesList();
+    foreachNames();
+
+//    printNamesList();
 
 //    iterationArrayByPointer();
 

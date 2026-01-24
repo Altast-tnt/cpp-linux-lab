@@ -9,4 +9,6 @@ void iterationArrayByPointer();
 
 void printNamesList();
 
+void foreachNames();
+
 #endif // MASSIVESTEST_H

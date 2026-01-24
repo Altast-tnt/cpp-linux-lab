@@ -155,4 +155,23 @@ void iterationArrayByPointer()
 
 }
 
-
+void foreachNames()
+{
+    std::string names[] {"Sasha", "Ivan", "John", "Orlando", "Leonardo", "Nina", "Anton", "Molly"};
+    std::cout << "Enter the name: ";
+    std::string userNameinput;
+    std::getline(std::cin, userNameinput);
+    bool foundName {false};
+    for (const auto &name : names)
+    {
+        if (userNameinput == name)
+        {
+            foundName = true;
+            break;
+        }
+    }
+    if (foundName)
+        std::cout << userNameinput << " was found.\n";
+    else
+        std::cout << userNameinput << " was not found.\n";
+}
