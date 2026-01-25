@@ -8,4 +8,5 @@ constexpr int c_deckSize = 52;
 std::array<Card, c_deckSize> initializationDeck();
 void printDeck(const std::array<Card, c_deckSize> &deck);
 void shuffleDeck(std::array<Card, c_deckSize> &deck);
+bool playBlackjack(std::array<Card, c_deckSize> &deck);
 

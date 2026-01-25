@@ -2,6 +2,7 @@
 #include <array>
 #include <cstdlib>
 #include <string>
+#include <limits>
 #include "CardGame.h"
 
 
@@ -129,9 +130,88 @@ void shuffleDeck(std::array<Card, c_deckSize> &deck)
     }
 }
 
-void cardGame()
+char chooseHitStand()
 {
+    char choose;
+    std::cout << "hit (h)/stand (s): ";
+    while (true)
+    {
+        if (std::cin >> choose)
+        {
+            switch(choose)
+            {
+                case 'H':
+                case 'h':
+                {
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    return 'h';
+                }
+                case 'S':
+                case 's':
+                {
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    return 's';
+                }
+                default:
+                {
+                    std::cout << "chooseHitStand(): Write h or s\n";
+                }
+            }
+        }
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "chooseHitStand(): Something went wrong\n";
+    }
+}
 
+
+bool playBlackjack(std::array<Card, c_deckSize> &deck)
+{
+    Card *cardPtr = &deck[0];
+    int playerResult {0};
+    int dilerResult {0};
+
+    dilerResult += getCardValue(*cardPtr++);
+    playerResult += getCardValue(*cardPtr++);
+    playerResult += getCardValue(*cardPtr++);
+
+    while (true)
+    {
+        std::cout << "You have: " << playerResult << " points.\n";
+        if (playerResult > 21)
+        {
+            std::cout << "You lose.\n";
+            return false;
+        }
+        if (chooseHitStand() == 's')
+        {
+            break;
+        }
+        playerResult += getCardValue(*cardPtr++);
+    }
+
+    std::cout << "Dealer's turn...\n";
+    while (dilerResult <= 17)
+    {
+        dilerResult += getCardValue(*cardPtr++);
+        std::cout << "Dealer now has: " << dilerResult << " points.\n";
+    }
+
+    if (dilerResult > 21)
+    {
+        std::cout << "You win.\n";
+        return true;
+    }
+
+    if (playerResult > dilerResult)
+    {
+        std::cout << "You win with " << playerResult << " vs " << dilerResult << "\n";
+        return true;
+    } else
+    {
+        std::cout << "You lose with " << playerResult << " vs " << dilerResult << "\n";
+        return false;
+    }
 
 }
 

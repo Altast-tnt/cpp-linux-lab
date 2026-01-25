@@ -17,6 +17,7 @@ int main()
 
     std::cout << "\nShuffled deck:\n";
     printDeck(deck);
+    playBlackjack(deck);
 
 //    printStringByWord("Hello World!");
 

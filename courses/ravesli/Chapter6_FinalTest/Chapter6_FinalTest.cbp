@@ -32,6 +32,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="CStyleString.cpp" />
+		<Unit filename="CStyleString.h" />
+		<Unit filename="CardGame.cpp" />
+		<Unit filename="CardGame.h" />
+		<Unit filename="ChangeFunc.cpp" />
+		<Unit filename="ChangeFunc.h" />
+		<Unit filename="ForCardGame.h" />
+		<Unit filename="PlayerWithItems.cpp" />
+		<Unit filename="PlayerWithItems.h" />
+		<Unit filename="Students.cpp" />
+		<Unit filename="Students.h" />
+		<Unit filename="StudentsStruct.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
