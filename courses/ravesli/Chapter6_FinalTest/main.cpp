@@ -1,8 +1,10 @@
 #include <iostream>
 #include "PlayerWithItems.h"
+#include "Students.h"
 
 int main()
 {
-    countTotalItems(3, 6, 12);
+    getNameNGrade();
+    //countTotalItems(3, 6, 12);
     return 0;
 }
