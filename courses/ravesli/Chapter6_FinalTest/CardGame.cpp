@@ -1,42 +1,10 @@
 #include <iostream>
 #include <array>
 #include <cstdlib>
-
-constexpr int c_deckSize = 52;
-
-enum class Advantages
-{
-    TWO,
-    THREE,
-    FOUR,
-    FIVE,
-    SIX,
-    SEVEN,
-    EIGHT,
-    NINE,
-    TEN,
-    JACK,
-    QUEEN,
-    KING,
-    ACE,
-    MAX_ADVANTAGE,
-};
-
-enum class Suits
-{
-    CLUBS,
-    SPADES,
-    HEARTS,
-    DIAMONDS,
-    MAX_SUIT,
-};
+#include <string>
+#include "CardGame.h"
 
 
-struct Card
-{
-    Advantages advantage;
-    Suits suit;
-};
 
 std::string getNameAdvantages(const Advantages &advantage)
 {
@@ -73,23 +41,23 @@ std::string getNameSuits(const Suits &suit)
 
 int getCardValue(const Card &card)
 {
-    switch(card.suit)
+    switch(card.advantage)
     {
-        case TWO:    return 2;
-        case THREE:  return 3;
-        case FOUR:   return 4;
-        case FIVE:   return 5;
-        case SIX:    return 6;
-        case SEVEN:  return 7;
-        case EIGHT:  return 8;
-        case NINE:   return 9;
-        case TEN:    return 10;
-        case JACK:   return 10;
-        case QUEEN:  return 10;
-        case KING:   return 10;
-        case ACE:    return 11;
+        case Advantages::TWO:    return 2;
+        case Advantages::THREE:  return 3;
+        case Advantages::FOUR:   return 4;
+        case Advantages::FIVE:   return 5;
+        case Advantages::SIX:    return 6;
+        case Advantages::SEVEN:  return 7;
+        case Advantages::EIGHT:  return 8;
+        case Advantages::NINE:   return 9;
+        case Advantages::TEN:
+        case Advantages::JACK:
+        case Advantages::QUEEN:
+        case Advantages::KING:   return 10;
+        case Advantages::ACE:    return 11;
+        default:                 return 0;
     }
-    return 0;
 }
 
 
@@ -100,10 +68,10 @@ void printCard(const Card &card)
 
     if (advantage == "10")
     {
-        std::cout << advantage << suit[0] << '\n';
+        std::cout << advantage << suit[0] << " ";
     } else
     {
-        std::cout << advantage[0] << suit[0] << '\n';
+        std::cout << advantage[0] << suit[0] << " ";
     }
 }
 
@@ -130,9 +98,11 @@ std::array<Card, c_deckSize> initializationDeck()
 
 void printDeck(const std::array<Card, c_deckSize> &deck)
 {
-    for (auto &card : deck)
+    int i = 0;
+    for (const auto &card : deck)
     {
         printCard(card);
+        if (++i % 13 == 0) std::cout << '\n';
     }
 }
 

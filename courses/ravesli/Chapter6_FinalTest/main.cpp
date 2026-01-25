@@ -5,10 +5,18 @@
 #include "Students.h"
 #include "ChangeFunc.h"
 #include "CStyleString.h"
+#include "CardGame.h"
 
 int main()
 {
     srand(static_cast<unsigned int>(time(nullptr)));
+    auto deck = initializationDeck();
+    std::cout << "Original deck:\n";
+    printDeck(deck);
+    shuffleDeck(deck);
+
+    std::cout << "\nShuffled deck:\n";
+    printDeck(deck);
 
 //    printStringByWord("Hello World!");
 
