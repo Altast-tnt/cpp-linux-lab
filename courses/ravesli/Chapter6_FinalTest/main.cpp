@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 #include "PlayerWithItems.h"
 #include "Students.h"
 #include "ChangeFunc.h"
@@ -6,7 +8,9 @@
 
 int main()
 {
-    printStringByWord("Hello World!");
+    srand(static_cast<unsigned int>(time(nullptr)));
+
+//    printStringByWord("Hello World!");
 
 //    int x = 1;
 //    int y = 4;
