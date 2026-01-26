@@ -1,4 +1,6 @@
 #include <iostream>
+#include <limits>
+#include <string>
 
 int factorial(int x)
 {
@@ -20,4 +22,28 @@ int sumNums(int x)
     {
         return (x % 10) + sumNums(x / 10);
     }
+}
+
+int getNum()
+{
+    int n;
+    std::cout << "Enter a number: ";
+    while (true)
+    {
+        if(std::cin >> n && n > 0)
+        {
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            return n;
+        }
+        std::cout << "getNum(): Invalid type of data or your number is under or equals 0\n";
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
+}
+
+std::string convertToBit(int num)
+{
+    if (num == 0)
+        return "";
+    return convertToBit(num / 2) + std::to_string(num % 2);
 }
