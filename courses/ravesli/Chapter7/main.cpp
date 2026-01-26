@@ -4,11 +4,17 @@
 #include "Recursion.h"
 
 
-int main()
+int main(int argc, char *argv[])
 {
 
-    int num = getNum();
-    std::cout << convertToBit(num);
+    std::cout << "There are " << argc << " arguments:\n";
+
+    // Перебираем каждый аргумент и выводим его порядковый номер и значение
+    for (int count=0; count < argc; ++count)
+        std::cout << count << " " << argv[count] << '\n';
+
+//    int num = getNum();
+//    std::cout << convertToBit(num);
 
 
 //    std::cout << sumNums(83569);

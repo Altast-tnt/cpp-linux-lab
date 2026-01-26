@@ -30,7 +30,7 @@ int getNum()
     std::cout << "Enter a number: ";
     while (true)
     {
-        if(std::cin >> n && n > 0)
+        if(std::cin >> n)
         {
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             return n;

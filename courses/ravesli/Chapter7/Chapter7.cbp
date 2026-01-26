@@ -32,6 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Calculator.cpp" />
+		<Unit filename="Calculator.h" />
+		<Unit filename="Prototipes.h" />
+		<Unit filename="Recursion.cpp" />
+		<Unit filename="Recursion.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
