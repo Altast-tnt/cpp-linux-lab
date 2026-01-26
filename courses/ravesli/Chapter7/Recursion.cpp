@@ -10,3 +10,14 @@ int factorial(int x)
         return x * factorial(x-1);
     }
 }
+
+int sumNums(int x)
+{
+    if (x == 0)
+    {
+        return 0;
+    } else
+    {
+        return (x % 10) + sumNums(x / 10);
+    }
+}
