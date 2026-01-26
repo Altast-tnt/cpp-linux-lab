@@ -1,7 +1,17 @@
 #include <iostream>
 #include <limits>
+#include <array>
 
 typedef int (*arithmeticFcn)(int, int);
+
+struct arithmeticStruct
+{
+    char operation;
+    arithmeticFcn fncPtr;
+};
+
+
+
 
 int getInt()
 {
@@ -57,16 +67,26 @@ int divide(int a, int b)
     return a / b;
 }
 
+static std::array<arithmeticStruct, 4> arithmeticArray {
+    {
+        { '+', add },
+        { '-', substract },
+        { '*', multiply },
+        { '/', divide }
+    }
+};
+
 arithmeticFcn getArithmeticFcn(char operation)
 {
-    switch(operation)
+    for (const auto &entry : arithmeticArray)
     {
-        case '+': return add;
-        case '-': return substract;
-        case '*': return multiply;
-        case '/': return divide;
-        default:  return add;
+        if (entry.operation == operation)
+        {
+            return entry.fncPtr;
+        }
     }
+
+    return add;
 }
 
 
