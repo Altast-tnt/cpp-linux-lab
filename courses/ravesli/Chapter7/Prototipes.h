@@ -9,3 +9,9 @@ void minmax(const int x, const int y, int &minOut, int &maxOut);
 int getIndexOfLargestValue(const int *massive, const int length);
 
 const int& getElement(const int *massive, const int index);
+
+double max(double x, double y);
+
+void swap(int &x, int &y);
+
+int& getLargestElement(int *array, int length);
