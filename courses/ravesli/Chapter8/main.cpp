@@ -3,13 +3,25 @@
 #include "Stack.h"
 #include "Ball.h"
 #include "RGBA.h"
+#include "Thing.h"
 
 int main()
 {
 
+	Thing defl;
+	defl.print();
 
-	RGBA color(0, 135, 135);
-	color.print();
+	Thing red("red");
+	red.print();
+
+	Thing thirty(30.0);
+	thirty.print();
+
+	Thing redThirty("red", 30.0);
+	redThirty.print();
+
+//	RGBA color(0, 135, 135);
+//	color.print();
 
 //    Ball def;
 //    def.print();
