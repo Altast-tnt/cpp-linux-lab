@@ -4,21 +4,30 @@
 #include "Ball.h"
 #include "RGBA.h"
 #include "Thing.h"
+#include "Point3D.h"
+#include "Vector3D.h"
 
 int main()
 {
 
-	Thing defl;
-	defl.print();
+    Point3D p(3.0, 4.0, 5.0);
+	Vector3D v(3.0, 3.0, -2.0);
 
-	Thing red("red");
-	red.print();
+	p.print();
+	p.moveByVector(v);
+	p.print();
 
-	Thing thirty(30.0);
-	thirty.print();
-
-	Thing redThirty("red", 30.0);
-	redThirty.print();
+//	Thing defl;
+//	defl.print();
+//
+//	Thing red("red");
+//	red.print();
+//
+//	Thing thirty(30.0);
+//	thirty.print();
+//
+//	Thing redThirty("red", 30.0);
+//	redThirty.print();
 
 //	RGBA color(0, 135, 135);
 //	color.print();
