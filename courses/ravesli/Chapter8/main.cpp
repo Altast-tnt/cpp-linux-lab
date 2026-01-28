@@ -2,21 +2,26 @@
 #include "Numbers.h"
 #include "Stack.h"
 #include "Ball.h"
+#include "RGBA.h"
 
 int main()
 {
 
-    Ball def;
-    def.print();
 
-	Ball black("black");
-	black.print();
+	RGBA color(0, 135, 135);
+	color.print();
 
-	Ball thirty(30.0);
-	thirty.print();
-
-	Ball blackThirty("black", 30.0);
-	blackThirty.print();
+//    Ball def;
+//    def.print();
+//
+//	Ball black("black");
+//	black.print();
+//
+//	Ball thirty(30.0);
+//	thirty.print();
+//
+//	Ball blackThirty("black", 30.0);
+//	blackThirty.print();
 
 //	Stack stack;
 //	stack.reset();
