@@ -2,10 +2,11 @@
 
 class Numbers
 {
+    double m_a;
+    double m_b;
+    double m_c;
 public:
-    int m_numF;
-    int m_numS;
-
-    void set(int x, int y);
+    void setValues(double a, double b, double c);
     void print();
+    bool isEqual(Numbers point);
 };

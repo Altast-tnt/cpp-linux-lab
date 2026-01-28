@@ -3,12 +3,24 @@
 
 int main()
 {
-	Numbers n1;
-	n1.set(3, 3); // инициализируем объект n1 значениями 3 и 3
+    Numbers point1;
+    point1.setValues(3.0, 4.0, 5.0);
 
-	Numbers n2{ 4, 4 }; // инициализируем объект n2 значениями 4 и 4
+    Numbers point2;
+    point2.setValues(3.0, 4.0, 5.0);
 
-	n1.print();
-	n2.print();
+    if (point1.isEqual(point2))
+        std::cout << "point1 and point2 are equal\n";
+    else
+        std::cout << "point1 and point2 are not equal\n";
+
+    Numbers point3;
+    point3.setValues(7.0, 8.0, 9.0);
+
+    if (point1.isEqual(point3))
+        std::cout << "point1 and point3 are equal\n";
+    else
+        std::cout << "point1 and point3 are not equal\n";
+
     return 0;
 }
