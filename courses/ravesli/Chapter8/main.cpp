@@ -1,27 +1,40 @@
 #include <iostream>
 #include "Numbers.h"
 #include "Stack.h"
+#include "Ball.h"
 
 int main()
 {
 
-	Stack stack;
-	stack.reset();
+    Ball def;
+    def.print();
 
-	stack.print();
+	Ball black("black");
+	black.print();
 
-	stack.push(3);
-	stack.push(7);
-	stack.push(5);
-	stack.print();
+	Ball thirty(30.0);
+	thirty.print();
 
-	stack.pop();
-	stack.print();
+	Ball blackThirty("black", 30.0);
+	blackThirty.print();
 
-	stack.pop();
-	stack.pop();
-
-	stack.print();
+//	Stack stack;
+//	stack.reset();
+//
+//	stack.print();
+//
+//	stack.push(3);
+//	stack.push(7);
+//	stack.push(5);
+//	stack.print();
+//
+//	stack.pop();
+//	stack.print();
+//
+//	stack.pop();
+//	stack.pop();
+//
+//	stack.print();
 
 
 //    Numbers point1;
