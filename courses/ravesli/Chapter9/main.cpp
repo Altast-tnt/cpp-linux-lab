@@ -1,15 +1,23 @@
 #include <iostream>
 #include "Fraction.h"
 #include "Something.h"
+#include "GradeMap.h"
 
 int main()
 {
-    Something something;
 
-	if (!something)
-		std::cout << "Something is null.\n";
-	else
-		std::cout << "Something is not null.\n";
+    GradeMap grades;
+	grades["John"] = 'A';
+	grades["Martin"] = 'B';
+	std::cout << "John has a grade of " << grades["John"] << '\n';
+	std::cout << "Martin has a grade of " << grades["Martin"] << '\n';
+
+//    Something something;
+//
+//	if (!something)
+//		std::cout << "Something is null.\n";
+//	else
+//		std::cout << "Something is not null.\n";
 
 //	Fraction f1;
 //	std::cout << "Enter fraction 1: ";
