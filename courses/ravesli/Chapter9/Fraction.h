@@ -1,5 +1,6 @@
 #pragma once
 
+
 class Fraction
 {
 private:
@@ -11,7 +12,8 @@ public:
         reduce();
     }
 
-    void print() const;
+    friend std::ostream& operator<<(std::ostream& out, const Fraction &f);
+    friend std::istream& operator>>(std::istream& in, Fraction &f);
 
     friend Fraction operator*(const Fraction &f1, int num);
     friend Fraction operator*(int num, const Fraction &f1);

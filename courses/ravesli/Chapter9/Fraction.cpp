@@ -12,11 +12,6 @@ void Fraction::reduce()
     m_denominator /= nodNum;
 }
 
-void Fraction::print() const
-{
-    std::cout << m_numenator << "/" << m_denominator << '\n';
-}
-
 Fraction operator*(const Fraction &f1, int num)
 {
     return Fraction(f1.m_numenator * num, f1.m_denominator);
@@ -32,6 +27,23 @@ Fraction operator*(const Fraction &f1, const Fraction &f2)
     return Fraction(f1.m_numenator * f2.m_numenator, f1.m_denominator * f2.m_denominator);
 }
 
+
+std::ostream& operator<<(std::ostream& out, const Fraction &f)
+{
+    out << f.m_numenator << '/' << f.m_denominator;
+    return out;
+}
+std::istream& operator>>(std::istream& in, Fraction &f)
+{
+    char c;
+
+	in >> f.m_numenator;
+	in >> c;
+	in >> f.m_denominator;
+
+	f.reduce();
+    return in;
+}
 
 
 
