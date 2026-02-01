@@ -2,15 +2,19 @@
 #include "Fraction.h"
 #include "Something.h"
 #include "GradeMap.h"
+#include "MyString.h"
 
 int main()
 {
 
-    GradeMap grades;
-	grades["John"] = 'A';
-	grades["Martin"] = 'B';
-	std::cout << "John has a grade of " << grades["John"] << '\n';
-	std::cout << "Martin has a grade of " << grades["Martin"] << '\n';
+    MyString string("Hello, world!");
+    std::cout << string(7, 6);
+
+//    GradeMap grades;
+//	grades["John"] = 'A';
+//	grades["Martin"] = 'B';
+//	std::cout << "John has a grade of " << grades["John"] << '\n';
+//	std::cout << "Martin has a grade of " << grades["Martin"] << '\n';
 
 //    Something something;
 //
