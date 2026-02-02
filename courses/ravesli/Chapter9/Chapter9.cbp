@@ -32,6 +32,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Fraction.cpp" />
+		<Unit filename="Fraction.h" />
+		<Unit filename="GradeMap.cpp" />
+		<Unit filename="GradeMap.h" />
+		<Unit filename="MyString.cpp" />
+		<Unit filename="MyString.h" />
+		<Unit filename="Something.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

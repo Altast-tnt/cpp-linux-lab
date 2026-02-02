@@ -3,12 +3,33 @@
 #include "Something.h"
 #include "GradeMap.h"
 #include "MyString.h"
+#include "Average.h"
 
 int main()
 {
 
-    MyString string("Hello, world!");
-    std::cout << string(7, 6);
+    Average avg;
+
+	avg += 5;
+	std::cout << avg << '\n'; // 5 / 1 = 5
+
+	avg += 9;
+	std::cout << avg << '\n'; // (5 + 9) / 2 = 7
+
+	avg += 19;
+	std::cout << avg << '\n'; // (5 + 9 + 19) / 3 = 11
+
+	avg += -9;
+	std::cout << avg << '\n'; // (5 + 9 + 19 - 9) / 4 = 6
+
+	(avg += 7) += 11; // выполнение цепочки операций
+	std::cout << avg << '\n'; // (5 + 9 + 19 - 9 + 7 + 11) / 6 = 7
+
+	Average copy = avg;
+	std::cout << copy << '\n';
+
+//    MyString string("Hello, world!");
+//    std::cout << string(7, 6);
 
 //    GradeMap grades;
 //	grades["John"] = 'A';
