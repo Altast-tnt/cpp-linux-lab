@@ -4,29 +4,52 @@
 #include "GradeMap.h"
 #include "MyString.h"
 #include "Average.h"
+#include "IntArray.h"
+
+IntArray fillArray()
+{
+	IntArray a(6);
+	a[0] = 6;
+	a[1] = 7;
+	a[2] = 3;
+	a[3] = 4;
+	a[4] = 5;
+        a[5] = 8;
+
+	return a;
+}
 
 int main()
 {
 
-    Average avg;
+    IntArray a = fillArray();
+	std::cout << a << '\n';
 
-	avg += 5;
-	std::cout << avg << '\n'; // 5 / 1 = 5
+	IntArray b(1);
+	a = a;
+	b = a;
 
-	avg += 9;
-	std::cout << avg << '\n'; // (5 + 9) / 2 = 7
+	std::cout << b << '\n';
 
-	avg += 19;
-	std::cout << avg << '\n'; // (5 + 9 + 19) / 3 = 11
-
-	avg += -9;
-	std::cout << avg << '\n'; // (5 + 9 + 19 - 9) / 4 = 6
-
-	(avg += 7) += 11; // выполнение цепочки операций
-	std::cout << avg << '\n'; // (5 + 9 + 19 - 9 + 7 + 11) / 6 = 7
-
-	Average copy = avg;
-	std::cout << copy << '\n';
+//    Average avg;
+//
+//	avg += 5;
+//	std::cout << avg << '\n'; // 5 / 1 = 5
+//
+//	avg += 9;
+//	std::cout << avg << '\n'; // (5 + 9) / 2 = 7
+//
+//	avg += 19;
+//	std::cout << avg << '\n'; // (5 + 9 + 19) / 3 = 11
+//
+//	avg += -9;
+//	std::cout << avg << '\n'; // (5 + 9 + 19 - 9) / 4 = 6
+//
+//	(avg += 7) += 11; // выполнение цепочки операций
+//	std::cout << avg << '\n'; // (5 + 9 + 19 - 9 + 7 + 11) / 6 = 7
+//
+//	Average copy = avg;
+//	std::cout << copy << '\n';
 
 //    MyString string("Hello, world!");
 //    std::cout << string(7, 6);
