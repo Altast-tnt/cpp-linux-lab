@@ -32,10 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Average.cpp" />
+		<Unit filename="Average.h" />
+		<Unit filename="FixedPoint.cpp" />
+		<Unit filename="FixedPoint.h" />
 		<Unit filename="Fraction.cpp" />
 		<Unit filename="Fraction.h" />
 		<Unit filename="GradeMap.cpp" />
 		<Unit filename="GradeMap.h" />
+		<Unit filename="IntArray.cpp" />
+		<Unit filename="IntArray.h" />
 		<Unit filename="MyString.cpp" />
 		<Unit filename="MyString.h" />
 		<Unit filename="Something.h" />

@@ -5,31 +5,61 @@
 #include "MyString.h"
 #include "Average.h"
 #include "IntArray.h"
+#include "FixedPoint.h"
 
-IntArray fillArray()
-{
-	IntArray a(6);
-	a[0] = 6;
-	a[1] = 7;
-	a[2] = 3;
-	a[3] = 4;
-	a[4] = 5;
-        a[5] = 8;
-
-	return a;
-}
+//IntArray fillArray()
+//{
+//	IntArray a(6);
+//	a[0] = 6;
+//	a[1] = 7;
+//	a[2] = 3;
+//	a[3] = 4;
+//	a[4] = 5;
+//        a[5] = 8;
+//
+//	return a;
+//}
 
 int main()
 {
 
-    IntArray a = fillArray();
+    FixedPoint a(37, 58);
 	std::cout << a << '\n';
 
-	IntArray b(1);
-	a = a;
-	b = a;
-
+	FixedPoint b(-3, 9);
 	std::cout << b << '\n';
+
+	FixedPoint c(4, -7);
+	std::cout << c << '\n';
+
+	FixedPoint d(-5, -7);
+	std::cout << d << '\n';
+
+	FixedPoint e(0, -3);
+	std::cout << e << '\n';
+
+	std::cout << static_cast<double>(e) << '\n';
+
+    FixedPoint a1(0.03);
+	std::cout << a1 << '\n';
+
+	FixedPoint b1(-0.03);
+	std::cout << b1 << '\n';
+
+	FixedPoint c1(4.01); // сохранится, как 4.0099999..., поэтому нам нужно это всё округлить
+	std::cout << c1 << '\n';
+
+	FixedPoint d1(-4.01); // сохранится, как -4.0099999..., поэтому нам нужно это всё округлить
+	std::cout << d1 << '\n';
+
+//    IntArray a = fillArray();
+//	std::cout << a << '\n';
+//
+//	IntArray b(1);
+//	a = a;
+//	b = a;
+//
+//	std::cout << b << '\n';
 
 //    Average avg;
 //
