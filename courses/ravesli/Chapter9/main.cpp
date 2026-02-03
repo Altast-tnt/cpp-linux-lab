@@ -20,37 +20,62 @@
 //	return a;
 //}
 
+void SomeTest()
+{
+	std::cout << std::boolalpha;
+	std::cout << (FixedPoint(0.75) + FixedPoint(1.23) == FixedPoint(1.98)) << '\n'; // оба значения положительные, никакого переполнения
+	std::cout << (FixedPoint(0.75) + FixedPoint(1.50) == FixedPoint(2.25)) << '\n'; // оба значения положительные, переполнение
+	std::cout << (FixedPoint(-0.75) + FixedPoint(-1.23) == FixedPoint(-1.98)) << '\n'; // оба значения отрицательные, никакого переполнения
+	std::cout << (FixedPoint(-0.75) + FixedPoint(-1.50) == FixedPoint(-2.25)) << '\n'; // оба значения отрицательные, переполнение
+	std::cout << (FixedPoint(0.75) + FixedPoint(-1.23) == FixedPoint(-0.48)) << '\n'; // второе значение отрицательное, никакого переполнения
+	std::cout << (FixedPoint(0.75) + FixedPoint(-1.50) == FixedPoint(-0.75)) << '\n'; // второе значение отрицательное, возможно переполнение
+	std::cout << (FixedPoint(-0.75) + FixedPoint(1.23) == FixedPoint(0.48)) << '\n'; // первое значение отрицательное, никакого переполнения
+	std::cout << (FixedPoint(-0.75) + FixedPoint(1.50) == FixedPoint(0.75)) << '\n'; // первое значение отрицательное, возможно переполнение
+}
+
 int main()
 {
 
-    FixedPoint a(37, 58);
+    SomeTest();
+
+	FixedPoint a(-0.48);
 	std::cout << a << '\n';
 
-	FixedPoint b(-3, 9);
-	std::cout << b << '\n';
+	std::cout << -a << '\n';
 
-	FixedPoint c(4, -7);
-	std::cout << c << '\n';
+	std::cout << "Enter a number: "; // введите 5.678
+	std::cin >> a;
 
-	FixedPoint d(-5, -7);
-	std::cout << d << '\n';
+	std::cout << "You entered: " << a << '\n';
 
-	FixedPoint e(0, -3);
-	std::cout << e << '\n';
-
-	std::cout << static_cast<double>(e) << '\n';
-
-    FixedPoint a1(0.03);
-	std::cout << a1 << '\n';
-
-	FixedPoint b1(-0.03);
-	std::cout << b1 << '\n';
-
-	FixedPoint c1(4.01); // сохранится, как 4.0099999..., поэтому нам нужно это всё округлить
-	std::cout << c1 << '\n';
-
-	FixedPoint d1(-4.01); // сохранится, как -4.0099999..., поэтому нам нужно это всё округлить
-	std::cout << d1 << '\n';
+//    FixedPoint a(37, 58);
+//	std::cout << a << '\n';
+//
+//	FixedPoint b(-3, 9);
+//	std::cout << b << '\n';
+//
+//	FixedPoint c(4, -7);
+//	std::cout << c << '\n';
+//
+//	FixedPoint d(-5, -7);
+//	std::cout << d << '\n';
+//
+//	FixedPoint e(0, -3);
+//	std::cout << e << '\n';
+//
+//	std::cout << static_cast<double>(e) << '\n';
+//
+//    FixedPoint a1(0.03);
+//	std::cout << a1 << '\n';
+//
+//	FixedPoint b1(-0.03);
+//	std::cout << b1 << '\n';
+//
+//	FixedPoint c1(4.01);
+//	std::cout << c1 << '\n';
+//
+//	FixedPoint d1(-4.01);
+//	std::cout << d1 << '\n';
 
 //    IntArray a = fillArray();
 //	std::cout << a << '\n';
