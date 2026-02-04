@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Apple.h" />
+		<Unit filename="Banana.h" />
+		<Unit filename="Fruit.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

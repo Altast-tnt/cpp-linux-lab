@@ -5,13 +5,13 @@
 class Banana : public Fruit
 {
 public:
-    Banana(std::string name, std::string color) : Fruit(name, color)
+    Banana(std::string color = "yellow") : Fruit("banana", color)
     {
     }
 
-    friend std::ostream& operator<<(std::ostream &out, const Banana& banan)
-    {
-        out << "Banana(" << banan.getName() << ", " << banan.getColor() << ")\n";
-        return out;
-    }
+//    friend std::ostream& operator<<(std::ostream &out, const Banana& banan)
+//    {
+//        out << "Banana(" << banan.getName() << ", " << banan.getColor() << ")\n";
+//        return out;
+//    }
 };

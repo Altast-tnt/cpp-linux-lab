@@ -6,7 +6,7 @@ class Fruit
 private:
     std::string m_name, m_color;
 public:
-    explicit Fruit(std::string name, std::string color) : m_name(name), m_color(color)
+    Fruit(std::string name, std::string color) : m_name(name), m_color(color)
     {
     }
 
