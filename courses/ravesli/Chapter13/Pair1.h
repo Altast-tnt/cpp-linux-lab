@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 
 template <class T>
 class Pair1
@@ -12,6 +11,5 @@ public:
     }
     const T& first() const { return m_a; }
     const T& second() const { return m_b; }
-
 
 };
