@@ -1,11 +1,35 @@
 #include <QCoreApplication>
-#include <iostream>
+#include <QTextStream>
+#include <QString>
+#include <QStringView>
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
 
-    std::cout << "Qt version: " << qVersion() << std::endl;
+    QTextStream out(stdout);
 
-    return a.exec();
+    QString str = "There are many stars.";
+
+    // Способ №1
+    foreach (QChar qc, str) {
+        out << qc << " ";
+    }
+
+    out << Qt::endl;
+
+    // Способ №2
+    for (QChar *it=str.begin(); it!=str.end(); ++it) {
+        out << *it << " " ;
+    }
+
+    out << Qt::endl;
+
+    // Способ №3
+    for (int i = 0; i < str.size(); ++i) {
+        out << str.at(i) << " ";
+    }
+
+    out << Qt::endl;
+
+    return 0;
 }
