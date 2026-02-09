@@ -100,7 +100,6 @@ bool predictNumber(std::vector<int> &v)
     return false;
 }
 
-
 int main()
 {
     // Установка стартового значения для рандомайзера (текущее время)

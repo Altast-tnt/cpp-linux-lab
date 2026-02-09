@@ -43,3 +43,43 @@ Desktop.ini
 # --- Other IDEs ---
 .vscode/
 .idea/
+
+
+
+# --- Qt Creator и локальные настройки ---
+*.user
+*.user.*
+
+# --- Папки сборки (Build directories) ---
+build*/
+bin/
+dist/
+
+# --- CMake файлы ---
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+_deps/
+*.cmake
+
+# --- Скомпилированные файлы (Бинарники) ---
+*.o
+*.a
+*.so
+*.obj
+*.lib
+*.dll
+*.exe
+
+# --- Автоматически генерируемые файлы Qt ---
+ui_*.h
+moc_*.cpp
+qrc_*.cpp
+*.moc
+
+# --- Логи и системные файлы ---
+*.log
+.DS_Store
+Thumbs.db
