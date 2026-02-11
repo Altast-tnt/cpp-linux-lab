@@ -14,17 +14,17 @@ public:
 Cursors::Cursors(QWidget *parent)
     : QWidget(parent) {
 
-    QFrame *frame1 = new QFrame(this); // создаем виджет
-    frame1->setFrameStyle(QFrame::Box); // устанавливаем рамки фрейма
-    frame1->setCursor(Qt::SizeAllCursor); // задаем тип курсора SizeAllCursor для фрейма
+    QFrame *frame1 = new QFrame(this);
+    frame1->setFrameStyle(QFrame::Box);
+    frame1->setCursor(Qt::SizeAllCursor);
 
-    QFrame *frame2 = new QFrame(this); // создаем виджет
-    frame2->setFrameStyle(QFrame::Box); // устанавливаем рамки фрейма
-    frame2->setCursor(Qt::WaitCursor); // задаем тип курсора WaitCursor для фрейма
+    QFrame *frame2 = new QFrame(this);
+    frame2->setFrameStyle(QFrame::Box);
+    frame2->setCursor(Qt::WaitCursor);
 
-    QFrame *frame3 = new QFrame(this); // создаем виджет
-    frame3->setFrameStyle(QFrame::Box); // устанавливаем рамки фрейма
-    frame3->setCursor(Qt::PointingHandCursor); // задаем тип курсора PointingHandCursor для фрейма
+    QFrame *frame3 = new QFrame(this);
+    frame3->setFrameStyle(QFrame::Box);
+    frame3->setCursor(Qt::PointingHandCursor);
 
     // Группируем все фреймы в одну строку
     QGridLayout *grid = new QGridLayout(this);
