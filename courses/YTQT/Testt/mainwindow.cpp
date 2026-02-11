@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <QMessageBox>
-#include <QDebug>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,13 +17,17 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+
     QMessageBox::StandardButton reply = QMessageBox::question(this, "Header", "Text inside", QMessageBox::Yes | QMessageBox::No);
     if (reply == QMessageBox::Yes)
     {
         QApplication::quit();
     } else
     {
-        qDebug() << "Button No is pressed";
+        hide();
+        window = new SecondWindow(this);
+        window->show();
+
     }
 }
 
