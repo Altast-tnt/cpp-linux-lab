@@ -27,7 +27,6 @@ void MainWindow::on_pushButton_clicked()
         hide();
         window = new SecondWindow(this);
         window->show();
-
     }
 }
 
