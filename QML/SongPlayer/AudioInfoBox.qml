@@ -1,4 +1,5 @@
 import QtQuick
+import com.company.PlayerController
 
 Item {
     id: root
@@ -8,8 +9,7 @@ Item {
     property alias authorName: authorText.text
     property alias imageColor: albumImage.color
 
-    visible: playerController.currentSongIndex === root.songIndex
-
+    visible: PlayerController.currentSongIndex === root.songIndex
 
     Rectangle {
         id: albumImage

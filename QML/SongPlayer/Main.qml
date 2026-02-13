@@ -1,4 +1,5 @@
 import QtQuick
+import com.company.PlayerController
 
 Window {
     id: root
@@ -106,7 +107,7 @@ Window {
 
                 text: "<"
 
-                onClicked: playerController.switchToPreviousSong()
+                onClicked: PlayerController.switchToPreviousSong()
             }
 
             TextButton {
@@ -115,9 +116,9 @@ Window {
                 width: 75
                 height: 50
 
-                text: playerController.playing ? "Pause" : "Play"
+                text: PlayerController.playing ? "Pause" : "Play"
 
-                onClicked: playerController.playPause()
+                onClicked: PlayerController.playPause()
             }
 
             TextButton {
@@ -128,35 +129,7 @@ Window {
 
                 text: ">"
 
-                onClicked: playerController.switchToNextSong()
-            }
-        }
-    }
-
-    QtObject {
-        id: playerController
-
-        property int currentSongIndex: 0
-        property int songCount: 3
-        property bool playing: false
-
-        function playPause() {
-            playing = !playing
-        }
-
-        function switchToPreviousSong() {
-            if (currentSongIndex > 0) {
-                currentSongIndex--
-            } else {
-                currentSongIndex = songCount - 1
-            }
-        }
-
-        function switchToNextSong() {
-            if (currentSongIndex + 1 >= songCount) {
-                currentSongIndex = 0
-            } else {
-                currentSongIndex++
+                onClicked: PlayerController.switchToNextSong()
             }
         }
     }
