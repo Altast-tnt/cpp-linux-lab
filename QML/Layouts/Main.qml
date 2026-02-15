@@ -9,6 +9,28 @@ Window {
 
     color: "lightyellow"
 
+    RowLayout {
+        anchors.fill: parent
+        Rectangle {
+            Layout.preferredHeight: 80
+            Layout.preferredWidth: 80
+            color: "#eb4d4b"
+            Layout.alignment: Qt.AlignTop
+        }
+        Rectangle {
+            Layout.preferredHeight: 80
+            Layout.preferredWidth: 80
+            color: "#16a085"
+            Layout.alignment: Qt.AlignBottom | Qt.AlignHCenter
+        }
+        Rectangle {
+            Layout.preferredHeight: 80
+            Layout.preferredWidth: 80
+            color: "#0984e3"
+            Layout.alignment: Qt.AlignRight | Qt.AlignTop
+        }
+    }
+
     GridLayout {
         anchors.fill: parent
         rows: 2
