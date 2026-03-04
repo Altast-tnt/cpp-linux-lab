@@ -9,27 +9,14 @@
 3.  **Fun & Games:** Разработка небольших игр и графических приложений для практики.
 
 ### 🗂 Навигация
-
-#### 🐧 Linux & System Programming (`/linux-system`)
-Здесь находятся проекты, связанные с операционной системой:
-*   Взаимодействие с Linux API.
-*   Bash-скрипты и автоматизация.
-*   Учебные примеры модулей ядра (Kernel Modules).
-
-#### 🎮 GameDev & Graphics (`/gamedev`)
-Эксперименты с графикой и игровой логикой:
-*   Консольные игры.
-*   Работа с графическими библиотеками (SFML/SDL/OpenGL).
-
-#### 🧠 Core C++ & Algorithms (`/core-cpp`)
-*   Решение алгоритмических задач (LeetCode, CodeWars).
-*   Изучение особенностей стандартов (C++17, C++20).
-*   Реализация собственных структур данных.
+*   `cources` - раздел с изучением C++ и связанных технологий
+*   `QML` - изучение QML
+*   `dubaitTest` - небольшое тестовое задание для "Дубайт"
 
 ---
 
 ### 🛠 Инструментарий
-*   **Languages:** C++, C, Bash
+*   **Languages:** C++, C, Bash, QML
 *   **OS:** Fedora Linux / Linux General
 *   **Build Systems:** CMake, Makefiles, GCC/Clang
 *   **Tools:** GDB, Valgrind, Vim/NeoVim
