@@ -2,8 +2,7 @@
 
 unsigned long long  task1()
 {
-    // по 13 чисел выборка для рассчета сумм
-    unsigned long long counts[26] {0};
+    unsigned long long counts[100] {0};
 
     // Из условия задачи
     counts[0] = 1; // F[1] = 1
@@ -13,8 +12,9 @@ unsigned long long  task1()
 
     while (maxNum != 0)
     {
+        // попробовать через указатели двигаться пачками по 26
         // рассчет сумм
-        for (int i = 2; i < 26; ++i)
+        for (int i = 0; i < 27; ++i)
         {
             // рассчет для нечетного числа
             if ((i+1) % 2 != 0)
@@ -40,7 +40,7 @@ unsigned long long  task1()
                 }
             }
         }
-        maxNum /= 25;
+        maxNum -= 100;
         // для двух чисел нужен подсчет отдельно
 
     }
