@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="main.cpp" />
 		<Unit filename="task1.cpp" />
+		<Unit filename="task2.cpp" />
 		<Unit filename="test.cpp" />
 		<Extensions />
 	</Project>
